@@ -1,75 +1,36 @@
-SOW Full-Stack Application Clone
-This project is a full-stack web application created as a Statement of Work (SOW). It consists of a React frontend and a Fastify backend, demonstrating a range of skills including database design, API development, responsive UI/UX, and internationalization.
+# 📘 SOW Full-Stack Application Clone
+This project is a **full-stack web application** created as a **Statement of Work (SOW)**. It demonstrates expertise in **React frontend**, **Fastify backend**, **database design**, **API development**, **responsive UI/UX**, and **internationalization (i18n)**.
 
-Features
-Two Main Views:
+## ✨ Features
+- **Pricelist Page** – Fully functional, editable, and responsive.  
+- **Terms & Conditions Page** – Pixel-perfect clone with dynamic language switching.  
+- **Frontend**: Vite + React with vanilla CSS.  
+- **Backend**: Fastify API with Sequelize ORM.  
+- **Database**: PostgreSQL with Sequelize models and migrations.  
+- **Responsive UI**: Works seamlessly on **desktop, tablet, and mobile** (portrait & landscape).  
+- **Internationalization (i18n)**: Language switcher toggles between **English** and **Swedish**.  
+- **Modern UI Components**: Slide-out navigation menu (mobile), persistent sidebar (desktop), language dropdown.  
 
-A fully functional, editable, and responsive Pricelist page.
+## 🛠 Tech Stack
+**Backend**: Fastify v4.x, PostgreSQL v14+, Sequelize v6.x, @fastify/cors, dotenv  
+**Frontend**: React v18.2.0, Vite v5.x, Vanilla CSS, Axios v1.x, Lucide React v0.x, JavaScript (ES6+)  
 
-A pixel-perfect clone of a Terms & Conditions page.
+## ⚡ Local Setup & Installation
+You need to run **frontend** and **backend** in two separate terminals.  
 
-Full-Stack Architecture:
+### ✅ Prerequisites
+- Node.js v18+  
+- npm  
+- PostgreSQL  
 
-Frontend: Built with Vite + React, using vanilla CSS for styling.
-
-Backend: A Node.js API built with Fastify and the Sequelize ORM.
-
-Database Integration: Data is served from a PostgreSQL database, designed and managed with Sequelize.
-
-Complete Responsiveness: The UI is fully responsive and adapts to desktop, tablet, and mobile (portrait and landscape) screens as per the SOW requirements.
-
-Internationalization (i18n): Both the Pricelist and Terms pages feature a language switcher to toggle between English and Swedish, with all relevant text changing dynamically.
-
-Modern UI Components: Includes a slide-out navigation menu for mobile, a persistent sidebar for desktop, and a language selection dropdown.
-
-Tech Stack & Libraries
-This project was built using modern and robust technologies:
-
-Backend
-Framework: Fastify v4.x
-
-Database: PostgreSQL v14+
-
-ORM: Sequelize v6.x
-
-Environment Variables: dotenv
-
-CORS Handling: @fastify/cors
-
-Frontend
-Framework: React v18.2.0
-
-Build Tool: Vite v5.x
-
-Styling: Vanilla CSS with media queries for responsiveness.
-
-HTTP Client: Axios v1.x
-
-Icons: Lucide React v0.x
-
-Language: JavaScript (ES6+)
-
-Local Setup and Installation
-To run this project on your local machine, you will need to run the frontend and backend servers simultaneously in two separate terminals.
-
-Prerequisites
-Node.js (v18 or later)
-
-npm
-
-A running PostgreSQL instance
-
-1. Backend Setup
-Navigate to the backend directory:
-
+### 1️⃣ Backend Setup
+Navigate to backend folder:  
+```bash
 cd backend
-
-Install dependencies:
-
 npm install
+```
 
-Create an environment file: Create a file named .env in the backend directory and add your PostgreSQL credentials:
-
+## Create .env inside backend/ with the following:
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=your_postgres_username
@@ -77,34 +38,38 @@ DB_PASS=your_postgres_password
 DB_NAME=your_database_name
 PORT=5000
 
-Start the backend server:
-
+## Run backend server:
 node server.js
 
-The server will start on http://localhost:5000.
+Backend runs at: http://localhost:5000
 
-2. Frontend Setup
-Open a new terminal and navigate to the frontend directory:
-
+## Frontend Setup
+Navigate to frontend folder:
 cd frontend
-
-Install dependencies:
-
 npm install
 
-Create an environment file: Create a file named .env in the frontend directory and point it to your local backend server:
+## Create .env inside frontend/ with the following:
+VITE_API_BASE_URL=http://127.0.0.1:5000/api
 
-VITE_API_BASE_URL=[http://127.0.0.1:5000/api](http://127.0.0.1:5000/api)
-
-Start the frontend development server:
-
+## Run frontend server:
 npm run dev
 
-The application will be available at http://localhost:5173.
+Frontend runs at: http://localhost:5173
 
-3. Seeding the Database
-The database will be empty initially. Use an API client like Postman to populate it with sample data by sending requests to your running backend:
+## Seeding the Database
+Use Postman or another API client to populate the database.
 
-Add Pricelist Data: Send a POST request to http://127.0.0.1:5000/api/pricelist/seed.
+Seed Pricelist Data:
+POST http://127.0.0.1:5000/api/pricelist/seed
 
-Add Terms Content: Send PUT requests to http://127.0.0.1:5000/api/terms/sv and http://127.0.0.1:5000/api/terms/en with the content in the request body.
+Add Terms Content:
+PUT http://127.0.0.1:5000/api/terms/sv   # Swedish content
+PUT http://127.0.0.1:5000/api/terms/en   # English content
+
+## Demo
+Backend API → http://localhost:5000/api
+Frontend App → http://localhost:5173
+
+## License
+This project is part of a Statement of Work (SOW) deliverable.
+Do you also want me to **add example JSON payloads** for seeding the Pricelist and Terms via Postman so anyone can copy-paste and test immediately?
