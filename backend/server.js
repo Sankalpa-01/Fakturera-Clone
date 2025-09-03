@@ -10,8 +10,8 @@ dotenv.config();
 
 const fastify = Fastify({ logger: true });
 fastify.register(cors, {
-  origin: "*", // Allow any origin
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Allow these methods
+  origin: "https://fakturera-clone.vercel.app", // Your live Vercel URL
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
 });
 
 fastify.register(termsRoutes);
