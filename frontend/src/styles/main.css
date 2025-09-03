@@ -1,0 +1,34 @@
+/* Reset and basic styles */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* --- Main Layout Engine --- */
+
+/* This is the top-level container for the entire app view.
+   It makes the Header stack on top of the .page-layout div. */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* This container holds the Sidebar and the Pricelist View side-by-side.
+   It grows to fill the space below the header. */
+.page-layout {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1; /* This is crucial for it to take up remaining vertical space */
+}
+
+/* We can add a general rule for the sidebar width here */
+.sidebar {
+  flex-shrink: 0; /* Prevents the sidebar from shrinking */
+  width: 250px;
+}

@@ -1,0 +1,108 @@
+/* Main container for all pricelist content */
+.pricelist-view {
+  flex-grow: 1; /* Ensures this area takes up the remaining horizontal space */
+  padding: 1.5rem 2.5rem;
+  overflow-x: auto; /* Adds horizontal scrolling if the table is too wide */
+  background-color: #fff; /* A consistent white background */
+}
+
+/* --- Top Actions Bar --- */
+.pricelist-actions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.search-bars {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Styles for the flat input fields */
+.search-input-group input {
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 1rem;
+  width: 200px;
+}
+.search-input-group input:focus {
+  outline: none;
+  border-bottom-color: #1e90ff;
+}
+
+.desktop-action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Styles for the subtle desktop buttons */
+.desktop-btn {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+}
+.desktop-btn:hover {
+  background-color: #f8f9fa;
+}
+
+/* --- Pricelist Table --- */
+.pricelist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pricelist-header th {
+  text-align: left;
+  padding: 0.75rem;
+  color: #6c757d;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+
+.pricelist-row td {
+  padding: 0.5rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.pricelist-row input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.pricelist-row.active {
+  background-color: #e7f3ff;
+}
+
+.pricelist-row.active input {
+  background-color: white;
+  border: 1px solid #1e90ff;
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  visibility: hidden;
+}
+
+.pricelist-row.active .arrow-icon {
+  visibility: visible;
+}

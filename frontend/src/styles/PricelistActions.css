@@ -1,0 +1,70 @@
+.pricelist-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.search-bars {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.search-input-group {
+  position: relative;
+  flex-grow: 1; /* Allow inputs to grow */
+}
+
+.search-input-group input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 2rem; /* Rounded corners */
+  font-size: 1rem;
+}
+
+.search-input-group .search-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.action-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #1e90ff;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  .pricelist-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .action-buttons {
+    justify-content: flex-end;
+  }
+}
