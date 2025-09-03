@@ -9,10 +9,15 @@ import { sequelize } from "./models/index.js";
 dotenv.config();
 
 const fastify = Fastify({ logger: true });
+
+// --- THIS IS THE FIX ---
+// We are now explicitly telling the backend to allow requests
+// only from your deployed frontend's URL.
 fastify.register(cors, {
   origin: "https://fakturera-clone.vercel.app", // Your live Vercel URL
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
 });
+// ----------------------
 
 fastify.register(termsRoutes);
 fastify.register(pricelistRoutes);
