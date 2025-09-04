@@ -705,25 +705,26 @@ const TermsPage = () => {
   return (
     <>
       <style>{`
-        /* --- FIX for the white space at the bottom --- */
-        html, body {
+        /* --- Global Styles for Full-Page Background --- */
+        body, html {
           height: 100%;
           margin: 0;
           padding: 0;
-        }
-
-        .terms-page-container { 
-          min-height: 100vh; 
-          width: 100%; 
-          display: flex; 
-          flex-direction: column; 
           background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg'); 
           background-size: cover; 
           background-position: center; 
-          background-attachment: fixed; 
-          font-family: Arial, sans-serif; 
-          overflow-x: hidden; 
+          background-attachment: fixed;
+          font-family: Arial, sans-serif;
+          overflow-x: hidden;
         }
+
+        .terms-page-container { 
+          min-height: 100vh;
+          width: 100%;
+          display: flex; 
+          flex-direction: column;
+        }
+        
         .terms-header { 
           display: flex; 
           justify-content: space-between; 
