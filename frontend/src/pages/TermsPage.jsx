@@ -132,7 +132,7 @@ const TermsPage = () => {
     <>
       <style>{`
         /* --- All previous styles remain the same --- */
-        .terms-page-container { min-height: 100vh; width: 100vw; display: flex; flex-direction: column; background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Arial, sans-serif; }
+        .terms-page-container { min-height: 100vh; width: 100%; display: flex; flex-direction: column; background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Arial, sans-serif; }
         .terms-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background-color: rgba(44, 62, 80, 0.85); color: white; flex-shrink: 0; position: sticky; top: 0; z-index: 10; }
         .terms-header-left { display: flex; align-items: center; gap: 2rem; }
         .terms-header-logo-img { height: 35px; }
@@ -192,6 +192,19 @@ const TermsPage = () => {
           width: 30px;
           object-fit: cover;
           border-radius: 3px;
+        }
+
+        /* --- MOBILE OPTIMIZATION FIXES --- */
+        body {
+            overflow-x: hidden;
+        }
+        .terms-content-wrapper {
+            padding: 1rem; /* Reduce padding on mobile */
+        }
+        @media (max-width: 600px) {
+            .terms-main-content {
+                padding: 1rem; /* Reduce padding on main content area for mobile */
+            }
         }
       `}</style>
 
