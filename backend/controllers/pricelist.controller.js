@@ -3,7 +3,7 @@ import { Pricelist } from "../models/index.js";
 export const getPricelist = async (request, reply) => {
   try {
     const products = await Pricelist.findAll();
-    return reply.send(products);
+    return reply.type("application/json").send(products);
   } catch (error) {
     return reply.status(500).send({ error: error.message });
   }

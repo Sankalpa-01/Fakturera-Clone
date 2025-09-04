@@ -19,8 +19,8 @@ fastify.register(cors, {
 });
 // ----------------------
 
-fastify.register(termsRoutes);
 fastify.register(pricelistRoutes);
+fastify.register(termsRoutes);
 
 const start = async () => {
   try {
