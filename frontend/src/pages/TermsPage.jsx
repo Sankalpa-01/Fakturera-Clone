@@ -940,6 +940,22 @@ const TermsPage = () => {
                 padding: 1rem;
             }
         }
+
+        @media (max-width: 991px) {
+            /* ... your existing styles for hamburger menu ... */
+        }
+
+        @media (max-width: 768px) {
+            body, html {
+              background-attachment: scroll; /* <-- ADD THIS LINE */
+            }
+            .terms-main-content {
+                padding: 1rem;
+            }
+            .terms-content-wrapper {
+                padding: 1rem;
+            }
+        }
       `}</style>
 
       <div className="terms-page-container">
