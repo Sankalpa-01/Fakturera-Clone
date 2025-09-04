@@ -613,6 +613,8 @@ const TermsPage = () => {
     fetchTerms();
   }, [lang]);
 
+  // Pushing and deploying in vercel
+
   return (
     <>
       <style>{`
