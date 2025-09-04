@@ -41,7 +41,7 @@ PORT=5000
 ## Run backend server:
 node server.js
 
-Backend runs at: http://localhost:5000
+Backend runs at: [https://fakturera-clone-backend.onrender.com](https://fakturera-clone-backend.onrender.com)
 
 ## Frontend Setup
 Navigate to frontend folder:
@@ -49,26 +49,27 @@ cd frontend
 npm install
 
 ## Create .env inside frontend/ with the following:
-VITE_API_BASE_URL=http://127.0.0.1:5000/api
+VITE_API_BASE_URL=https://fakturera-clone-backend.onrender.com/api
 
 ## Run frontend server:
 npm run dev
 
-Frontend runs at: http://localhost:5173
+Frontend runs at: [https://fakturera-clone.vercel.app](https://fakturera-clone.vercel.app)
+You can see the terms on : [https://fakturera-clone.vercel.app/terms](https://fakturera-clone.vercel.app/terms)
 
 ## Seeding the Database
 Use Postman or another API client to populate the database.
 
 Seed Pricelist Data:
-POST http://127.0.0.1:5000/api/pricelist/seed
+POST [https://fakturera-clone-backend.onrender.com](https://fakturera-clone-backend.onrender.com)/api/pricelist/seed
 
 Add Terms Content:
-PUT http://127.0.0.1:5000/api/terms/sv   # Swedish content
-PUT http://127.0.0.1:5000/api/terms/en   # English content
+PUT https://fakturera-clone-backend.onrender.com/api/terms/sv   # Swedish content
+PUT https://fakturera-clone-backend.onrender.com/api/terms/en   # English content
 
 ## Demo
-Backend API → http://localhost:5000/api
-Frontend App → http://localhost:5173
+Backend API → https://fakturera-clone-backend.onrender.com/api
+Frontend App → https://fakturera-clone.vercel.app
 
 ## License
 This project is part of a Statement of Work (SOW) deliverable.
