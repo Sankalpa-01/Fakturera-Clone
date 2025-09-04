@@ -705,6 +705,13 @@ const TermsPage = () => {
   return (
     <>
       <style>{`
+        /* --- FIX for the white space at the bottom --- */
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
         .terms-page-container { 
           min-height: 100vh; 
           width: 100%; 
@@ -846,7 +853,7 @@ const TermsPage = () => {
 
         /* --- MOBILE HAMBURGER & SIDE NAV STYLES --- */
         .hamburger-menu {
-          display: none; /* Hide by default on desktop */
+          display: none;
           flex-direction: column;
           justify-content: space-around;
           width: 2rem;
@@ -916,11 +923,11 @@ const TermsPage = () => {
                 display: flex;
             }
             .terms-header {
-                justify-content: space-between; /* Ensure logo and language switcher are far apart */
-                padding: 1rem 1.5rem; /* Adjust padding for mobile */
+                justify-content: space-between;
+                padding: 1rem 1.5rem;
             }
             .terms-header-left {
-                gap: 0; /* Remove gap on mobile to prevent overflow */
+                gap: 0;
             }
         }
 
