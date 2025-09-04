@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Header from "./Header"; // Import the shared Header component
+import Header from "../components/common/Header.jsx"; // Import the shared Header component
 
 // --- Translations for all UI text ---
 const translations = {
