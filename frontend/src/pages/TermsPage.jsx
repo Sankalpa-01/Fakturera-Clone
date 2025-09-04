@@ -705,7 +705,7 @@ const TermsPage = () => {
   return (
     <>
       <style>{`
-        /* --- Global Styles for Full-Page Background --- */
+        /* --- FIX: Apply background styles to body/html instead of a container div --- */
         body, html {
           height: 100%;
           margin: 0;
@@ -719,10 +719,10 @@ const TermsPage = () => {
         }
 
         .terms-page-container { 
-          min-height: 100vh;
-          width: 100%;
+          min-height: 100vh; 
+          width: 100%; 
           display: flex; 
-          flex-direction: column;
+          flex-direction: column; 
         }
         
         .terms-header { 
